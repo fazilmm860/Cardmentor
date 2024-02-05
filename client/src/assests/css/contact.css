@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+
+
+.box{
+position:absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 470px;
+height: 370px;
+background-color: rgb(7, 7, 7);
+
+border-radius: 50px 50px;
+overflow: hidden;
+
+}
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent,#f9a310,#45f3ff);
+    transform-origin:bottom right;
+    animation: animate 8s linear infinite;
+   
+
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    background: linear-gradient(60deg,transparent,#d9138a,#d9138a);
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.fomHead
+{
+   position: absolute;
+   inset: 2px;
+   border-radius: 50px 50px;
+   background-image: url(../img/Contact-Page-bg.png);
+ 
+   z-index: 10;
+   padding: 30px 30px;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.formH2
+{
+    color:#45f3ff;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.inputBox
+{
+position: relative;
+  width: 300px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.inputBox .inputIcon
+
+{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline:none;
+    color: #e5e6ed;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+
+
+.inputIcon[type="submit"]
+{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: #45f3ff;
+
+    padding: 5px;
+    margin-top: 40px;
+    border-radius: 90px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inputIcon[type="submit"]:active
+{
+    background: linear-gradient(90deg, #45f3ff, #d9138a);
+    opacity: 0.8;
+
+}
+ 
+.inputSpan
+{
+    position: absolute;
+    left: 0;
+    padding: 20px  10px 10px;
+    font-size: 1em;
+    color: #d8d2d228;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+.formBtn{
+    margin: 10px;
+   border:2px solid white;
+}
+
+.inputSpan input:valid label,
+.inputSpan input:focus label
+{
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.75em;
+}
+
+
+@media screen and (max-width: 268px) {
+    body {
+        justify-content: flex-start; /* Change as needed */
+        align-items: flex-start; /* Change as needed */
+        padding: 20px; /* Add some space around the box */
+    }
+
+    .box {
+        width: 90%; /* Adjust the width as needed */
+        height: auto; /* Allow the height to adjust */
+        border-radius: 0; /* Remove border-radius if desired */
+    }
+
+    .box::before, .box::after {
+        display: none; /* Hide the gradient animations */
+    }
+
+    form {
+        width: 100%; /* Make the form full width */
+    }
+
+    .inputBox {
+        width: 100%; /* Make the input box full width */
+    }
+}
+
+.landingFrom{
+    display:inline-block;
+    margin-left: 150px;
+    width: 650px;   
+}
+
+.landingPage{
+    background-image: url('../img/background-mainpage-singh.png');
+    background-size: cover;
+    position: relative;
+}
+
+.landingpagebtn{
+    margin-top: 20px;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid white;
+}
+

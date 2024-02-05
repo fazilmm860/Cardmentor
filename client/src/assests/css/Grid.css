@@ -1,0 +1,26 @@
+.slider-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .grid-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .grid-item.active {
+    border: 2px solid #000;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  

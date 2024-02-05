@@ -1,0 +1,11 @@
+ <div>
+      <button 
+      className='bg-yellow-500 text-white px-4 py-2 rounded-md mr-2'
+      type='submit'
+      onClick={()=>handleEditClick(item)}
+      >Edit</button>
+      <button 
+      type='submit'
+      onClick={()=>handleDeleteClick(item._id)}
+      className='bg-red-500 text-white px-4 py-2 rounded-md'>Delete</button>
+  </div>
